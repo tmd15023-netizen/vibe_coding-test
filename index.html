@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="학교·기관·교사를 위한 AI·SW·메이커 교육 전문가 쑹쌤">
+  <title>코딩하는 쑹쌤 | AI·SW Education</title>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Mobile overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <span class="logo-main">ONCODELAB</span>
+        <span class="logo-sub">AI · SW Education</span>
+      </a>
+
+      <form class="search-form" role="search" aria-label="통합 검색">
+        <input type="search" class="search-input" placeholder="교육 프로그램, 블로그 글 검색..." aria-label="검색어 입력">
+        <button type="submit" class="search-btn" aria-label="검색">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+        </button>
+      </form>
+
+      <nav class="header-nav" aria-label="주요 메뉴">
+        <a href="#about">쑹쌤 소개</a>
+        <a href="#programs">교육 프로그램</a>
+        <a href="#cases">수업 사례</a>
+        <a href="#contents">AI·코딩 콘텐츠</a>
+        <a href="#contact" class="btn btn-primary btn-sm">교육 문의</a>
+      </nav>
+
+      <button class="mobile-category-btn" id="mobileMenuBtn" aria-label="교육 분야 메뉴 열기" aria-expanded="false">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h7"/></svg>
+        교육 분야
+      </button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar" aria-label="사이드 메뉴">
+      <nav class="sidebar-nav">
+        <div class="sidebar-group">
+          <h3 class="sidebar-title">교육 프로그램</h3>
+          <ul>
+            <li><a href="#programs" data-filter="ai">생성형 AI 교육</a></li>
+            <li><a href="#programs" data-filter="coding">SW·코딩 교육</a></li>
+            <li><a href="#programs" data-filter="arduino">아두이노·마이크로비트</a></li>
+            <li><a href="#programs" data-filter="maker">메이커·3D펜 교육</a></li>
+            <li><a href="#programs" data-filter="teacher">교사·강사 연수</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <h3 class="sidebar-title">수업 대상</h3>
+          <ul>
+            <li><a href="#programs">초등·중등 교육</a></li>
+            <li><a href="#programs">고등·대학 교육</a></li>
+            <li><a href="#programs">교사·강사 연수</a></li>
+            <li><a href="#programs">기관·기업 특강</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <h3 class="sidebar-title">바로가기</h3>
+          <ul>
+            <li><a href="#cases">수업 포트폴리오</a></li>
+            <li><a href="#about">자격 및 경력</a></li>
+            <li><a href="#stats">교육 후기</a></li>
+            <li><a href="#contact" class="sidebar-cta">강의 문의</a></li>
+            <li><a href="#" data-contact="openChat" class="sidebar-cta sidebar-kakao">카카오 오픈채팅</a></li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Page title bar -->
+      <div class="page-title-bar">
+        <div class="page-title-left">
+          <span class="page-breadcrumb">쑹쌤 소개</span>
+          <h1 class="page-title">AI·SW 교육 전문가 포트폴리오</h1>
+        </div>
+        <a href="#contact" class="page-title-action btn btn-outline">강의 문의하기</a>
+      </div>
+
+      <!-- Hero -->
+      <section class="hero" aria-label="메인 비주얼">
+        <div class="hero-bg">
+          <img src="assets/hero.jpg" alt="코딩하는 쑹쌤과 함께 AI·코딩 수업" loading="eager">
+          <div class="hero-gradient"></div>
+        </div>
+        <div class="hero-content">
+          <p class="hero-label">현장 중심 AI·SW 교육</p>
+          <h2 class="hero-title">
+            코딩으로<br> 
+            생각하는 힘을 키우고<br>
+            AI로<br>
+            <em>미래를 연결하는 교육</em>
+          </h2>
+          <p class="hero-desc">
+            학교·기관·교사를 위한 현장 중심 AI·SW 교육<br>
+            배우고, 만들고, 스스로 질문하는 수업을 진행합니다.
+          </p>
+          <div class="hero-actions">
+            <a href="#programs" class="btn btn-primary">교육 프로그램 보기</a>
+            <a href="#contact" class="btn btn-ghost">강의 문의하기</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Programs -->
+      <section class="section" id="programs">
+        <div class="section-header">
+          <h2 class="section-title">대표 교육 분야</h2>
+          <p class="section-desc">학교·기관·교사 맞춤 AI·SW·메이커 교육 프로그램</p>
+        </div>
+        <ul class="program-list">
+          <li class="program-item" data-category="ai">
+            <div class="program-item-content">
+              <strong class="program-item-title">생성형 AI·디지털 리터러시</strong>
+              <span class="program-item-desc">ChatGPT, AI 윤리, 디지털 리터러시를 체험 중심으로 배웁니다.</span>
+              <span class="program-item-meta">초·중·고 / 교사 연수</span>
+            </div>
+            <a href="https://blog.naver.com/qortmd1502/224344374004" target="_blank" rel="noopener noreferrer" class="program-link">자세히 보기 →</a>
+          </li>
+
+          <li class="program-item" data-category="arduino">
+            <div class="program-item-content">
+              <strong class="program-item-title">아두이노·마이크로비트</strong>
+              <span class="program-item-desc">센서·LED·모터를 활용한 IoT·스마트팜 프로젝트 수업.</span>
+              <span class="program-item-meta">중·고 / 메이커 동아리</span>
+            </div>
+            <a href="https://blog.naver.com/qortmd1502/224345469547" target="_blank" rel="noopener noreferrer" class="program-link">자세히 보기 →</a>
+          </li>
+
+          <li class="program-item" data-category="maker">
+            <div class="program-item-content">
+              <strong class="program-item-title">로봇·메이커 교육</strong>
+              <span class="program-item-desc">햄스터 로봇, 3D펜, 레고 등을 활용한 창의 메이킹 수업.</span>
+              <span class="program-item-meta">초·중등 / 방과후</span>
+            </div>
+            <a href="https://blog.naver.com/qortmd1502/224340795503" target="_blank" rel="noopener noreferrer" class="program-link">자세히 보기 →</a>
+          </li>
+
+          <li class="program-item" data-category="teacher">
+            <div class="program-item-content">
+              <strong class="program-item-title">바이브코딩·교사 연수</strong>
+              <span class="program-item-desc">에듀테크·AI·코딩 수업 설계 및 현장 적용 교사 연수.</span>
+              <span class="program-item-meta">교사·강사 / 기관</span>
+            </div>
+            <a href="https://blog.naver.com/qortmd1502/224340761445" target="_blank" rel="noopener noreferrer" class="program-link">자세히 보기 →</a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Cases -->
+      <section class="section section-alt" id="cases">
+        <div class="section-header">
+          <h2 class="section-title">수업 사례</h2>
+          <p class="section-desc">실제 현장에서 진행한 교육 후기와 프로젝트</p>
+        </div>
+        <div class="card-grid card-grid-4" id="caseGrid">
+          <a href="https://blog.naver.com/qortmd1502/224344374004" target="_blank" rel="noopener noreferrer" class="case-card">
+            <div class="case-card-image">
+              <img src="assets/cases/case-ai.jpg" alt="초등 AI수업 후기｜인공지능 체험 수업" loading="lazy">
+              <span class="case-badge">초등</span>
+            </div>
+            <div class="case-card-body">
+              <time class="case-date" datetime="2026-07-16">2026.07.16</time>
+              <h3>초등 AI수업 후기｜인공지능 체험 수업</h3>
+              <p>초등학생 대상 인공지능 체험 수업 현장 후기</p>
+            </div>
+          </a>
+
+          <a href="https://blog.naver.com/qortmd1502/224345469547" target="_blank" rel="noopener noreferrer" class="case-card">
+            <div class="case-card-image">
+              <img src="assets/cases/case-arduino.jpg" alt="고등 아두이노 스마트팜 수업 후기" loading="lazy">
+              <span class="case-badge">고등</span>
+            </div>
+            <div class="case-card-body">
+              <time class="case-date" datetime="2026-07-17">2026.07.17</time>
+              <h3>고등 아두이노 스마트팜 수업 후기</h3>
+              <p>센서·자동급수 시스템을 직접 설계·구현한 프로젝트</p>
+            </div>
+          </a>
+
+          <a href="https://blog.naver.com/qortmd1502/224340761445" target="_blank" rel="noopener noreferrer" class="case-card">
+            <div class="case-card-image">
+              <img src="assets/cases/case-teacher.jpg" alt="에듀테크 교사 연수 후기" loading="lazy">
+              <span class="case-badge">연수</span>
+            </div>
+            <div class="case-card-body">
+              <time class="case-date" datetime="2026-07-11">2026.07.11</time>
+              <h3>에듀테크 교사 연수 후기 | 바이브코딩 웹앱 제작</h3>
+              <p>교사 연수에서 바이브코딩으로 웹앱을 제작한 현장 후기</p>
+            </div>
+          </a>
+
+          <a href="https://blog.naver.com/qortmd1502/224312151339" target="_blank" rel="noopener noreferrer" class="case-card">
+            <div class="case-card-image">
+              <img src="assets/cases/case-robot.jpg" alt="햄스터 로봇 피지컬 코딩 수업 후기" loading="lazy">
+              <span class="case-badge">로봇</span>
+            </div>
+            <div class="case-card-body">
+              <time class="case-date" datetime="2026-06-11">2026.06.11</time>
+              <h3>햄스터 로봇으로 코딩 배워요 | 초등 피지컬 코딩 수업 후기</h3>
+              <p>햄스터 로봇으로 알고리즘 사고력을 키우는 초등 코딩 수업</p>
+            </div>
+          </a>
+        </div>
+        <div class="cases-more">
+          <a href="https://blog.naver.com/PostList.naver?blogId=qortmd1502&categoryNo=16" target="_blank" rel="noopener noreferrer" class="cases-more-link">교육 후기 더보기 →</a>
+        </div>
+      </section>
+
+      <!-- Stats -->
+      <section class="section" id="stats">
+        <div class="section-header">
+          <h2 class="section-title">숫자로 보는 쑹쌤</h2>
+          <p class="section-desc">블로그와 현장 교육을 통해 쌓아온 전문성</p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number" data-count="273">273+</span>
+            <span class="stat-label">교육 콘텐츠</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="95">95+</span>
+            <span class="stat-label">수업 후기</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="14">14+</span>
+            <span class="stat-label">아두이노 사례</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number stat-text">다양한</span>
+            <span class="stat-label">학교·기관 현장 교육 경험</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contents -->
+      <section class="section section-alt" id="contents">
+        <div class="section-header">
+          <h2 class="section-title">전문 콘텐츠</h2>
+          <p class="section-desc">AI·코딩·미래교육 인사이트 — 블로그 아카이브</p>
+        </div>
+        <div class="content-tabs" role="tablist">
+          <button class="content-tab active" role="tab" aria-selected="true" data-tab="ai">AI 교육</button>
+          <button class="content-tab" role="tab" aria-selected="false" data-tab="coding">코딩 수업 자료</button>
+          <button class="content-tab" role="tab" aria-selected="false" data-tab="cert">자격증·공부법</button>
+          <button class="content-tab" role="tab" aria-selected="false" data-tab="teacher">교사 연수</button>
+          <button class="content-tab" role="tab" aria-selected="false" data-tab="future">미래교육 인사이트</button>
+        </div>
+        <div class="content-list" id="contentList">
+          <a href="https://blog.naver.com/qortmd1502/224359617983" target="_blank" rel="noopener noreferrer" class="content-item">
+            <span class="content-tag">AI 교육</span>
+            <h3>AI와 인간, 뭐가 다를까? 5가지 핵심 차이</h3>
+            <time datetime="2026-07">2026.07</time>
+          </a>
+          <a href="https://blog.naver.com/qortmd1502/224355653878" target="_blank" rel="noopener noreferrer" class="content-item">
+            <span class="content-tag">AI 교육</span>
+            <h3>인공신경망은 어떻게 뇌를 본떴을까?</h3>
+            <time datetime="2026-07">2026.07</time>
+          </a>
+          <a href="https://blog.naver.com/qortmd1502/224355638835" target="_blank" rel="noopener noreferrer" class="content-item">
+            <span class="content-tag">미래교육</span>
+            <h3>인공지능 잘하는 법? 융합적 사고력이 답</h3>
+            <time datetime="2026-07">2026.07</time>
+          </a>
+          <a href="https://blog.naver.com/qortmd1502/224344355922" target="_blank" rel="noopener noreferrer" class="content-item">
+            <span class="content-tag">교사 연수</span>
+            <h3>AI-POT이란? 취업 준비생 필수 자격증</h3>
+            <time datetime="2026-07">2026.07</time>
+          </a>
+          <a href="https://blog.naver.com/qortmd1502/224340745469" target="_blank" rel="noopener noreferrer" class="content-item">
+            <span class="content-tag">코딩</span>
+            <h3>바이브코딩 뜻과 장점 | 결국 질문하는 힘</h3>
+            <time datetime="2026-07">2026.07</time>
+          </a>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="section" id="about">
+        <div class="section-header">
+          <h2 class="section-title">쑹쌤 소개</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-profile">
+            <div class="about-photo">
+              <img src="assets/profile.png" alt="쑹쌤 프로필" loading="lazy">
+            </div>
+            <div class="about-intro">
+              <p class="about-lead">
+                학교와 교육기관에서 AI·SW·메이커 교육을 진행하는 <strong>쑹쌤</strong>입니다.  </p>
+                기술을 단순히 따라 하는 수업보다, <strong>학습자가 질문하고 직접 결과물을 만드는 교육을 지향</strong>합니다.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-details">
+            <div class="about-block">
+              <h3>주요 자격 및 전공</h3>
+              <ul>
+                <li>컴퓨터교육 / 교육 관련 자격</li>
+                <li>정보·SW·AI 교육 전문</li>
+                <li>에듀테크·메이커 교육 경력</li>
+              </ul>
+            </div>
+            <div class="about-block">
+              <h3>강의 가능 지역</h3>
+              <ul>
+                <li>전북 및 인근 지역</li>
+                <li>전국 온·오프라인 연수 가능</li>
+              </ul>
+            </div>
+            <div class="about-block">
+              <h3>주요 교육 대상</h3>
+              <ul>
+                <li>초·중·고등학생</li>
+                <li>대학생 및 성인</li>
+                <li>교사·강사 연수</li>
+                <li>기관·기업 특강</li>
+              </ul>
+            </div>
+            <div class="about-block">
+              <h3>출강·협업 경험</h3>
+              <ul>
+                <li>초·중·고등학교 SW·AI·메이커 수업</li>
+                <li>교육청·교원연수원 연수</li>
+                <li>도서관·문화센터 방학 특강</li>
+                <li>기관.기업 역량강화 연수</li>
+
+              </ul>
+            </div>
+          </div>
+
+          <div class="reviews">
+            <h3>실제 교육 후기</h3>
+            <div class="review-grid">
+              <blockquote class="review-card">
+                <p>"아이들이 직접 만들면서 AI를 이해할 수 있어서 좋았습니다. 수업이 체계적이고 재미있었어요."</p>
+                <cite>— ○○초등학교 담당 교사</cite>
+              </blockquote>
+              <blockquote class="review-card">
+                <p>"아두이노 스마트팜 프로젝트로 학생들의 참여도가 높았습니다. 실습 중심 수업이 인상적이었습니다."</p>
+                <cite>— ○○고등학교 SW 담당</cite>
+              </blockquote>
+              <blockquote class="review-card">
+                <p>"교사 연수에서 바로 수업에 적용할 수 있는 자료와 방법을 배울 수 있었습니다."</p>
+                <cite>— ○○교육청 연수 참여 교사</cite>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section section-contact" id="contact">
+        <div class="contact-inner">
+          <div class="contact-header">
+            <h2 class="section-title">학교·기관에 맞는 AI·SW 교육을 찾고 계신가요?</h2>
+            <p class="section-desc">아래 양식을 작성하거나, 오픈채팅·톡톡으로 편하게 문의해 주세요.</p>
+          </div>
+
+          <div class="contact-quick">
+            <a href="#" data-contact="openChat" class="contact-quick-item contact-quick-kakao">
+              <span class="contact-quick-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.48 3 2 6.58 2 11c0 2.54 1.19 4.81 3.05 6.27L4 21l4.09-2.54C9.24 18.82 10.58 19 12 19c5.52 0 10-3.58 10-8s-4.48-8-10-8z"/></svg>
+              </span>
+              <span class="contact-quick-text">
+                <strong>카카오 오픈채팅</strong>
+                <small>빠른 상담 · 교육 문의</small>
+              </span>
+            </a>
+            <a href="#" data-contact="naverTalk" class="contact-quick-item contact-quick-naver">
+              <span class="contact-quick-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.48 3 2 6.58 2 11c0 2.54 1.19 4.81 3.05 6.27L4 21l4.09-2.54C9.24 18.82 10.58 19 12 19c5.52 0 10-3.58 10-8s-4.48-8-10-8z"/></svg>
+              </span>
+              <span class="contact-quick-text">
+                <strong>네이버 톡톡</strong>
+                <small>교육 프로그램 상담</small>
+              </span>
+            </a>
+            <a href="#" data-contact="phone" class="contact-quick-item contact-quick-phone">
+              <span class="contact-quick-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </span>
+              <span class="contact-quick-text">
+                <strong>전화 문의</strong>
+                <small>010-4829-4794</small>
+              </span>
+            </a>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="target">교육 대상</label>
+                <select id="target" name="target" required>
+                  <option value="">선택해 주세요</option>
+                  <option value="elementary">초등</option>
+                  <option value="middle">중등</option>
+                  <option value="high">고등</option>
+                  <option value="teacher">교사·강사 연수</option>
+                  <option value="institution">기관·기업</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="date">희망 날짜</label>
+                <input type="date" id="date" name="date">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="region">지역</label>
+                <input type="text" id="region" name="region" placeholder="예: 전주, 서울">
+              </div>
+              <div class="form-group">
+                <label for="count">예상 인원</label>
+                <input type="number" id="count" name="count" placeholder="예: 20" min="1">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="topic">원하는 교육 주제</label>
+              <input type="text" id="topic" name="topic" placeholder="예: 생성형 AI, 아두이노, 메이커">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">이름 / 기관명</label>
+                <input type="text" id="name" name="name" required placeholder="홍길동 또는 ○○초등학교">
+              </div>
+              <div class="form-group">
+                <label for="phone">연락처</label>
+                <input type="tel" id="phone" name="phone" required placeholder="010-0000-0000">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">추가 문의 사항</label>
+              <textarea id="message" name="message" rows="4" placeholder="수업 시간, 장소, 기타 요청 사항을 적어 주세요."></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary btn-lg">문의하기</button>
+              <a href="#" data-contact="openChat" class="btn btn-kakao btn-lg">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.48 3 2 6.58 2 11c0 2.54 1.19 4.81 3.05 6.27L4 21l4.09-2.54C9.24 18.82 10.58 19 12 19c5.52 0 10-3.58 10-8s-4.48-8-10-8z"/></svg>
+                카카오 오픈채팅
+              </a>
+              <a href="#" data-contact="naverTalk" class="btn btn-outline btn-lg">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.48 3 2 6.58 2 11c0 2.54 1.19 4.81 3.05 6.27L4 21l4.09-2.54C9.24 18.82 10.58 19 12 19c5.52 0 10-3.58 10-8s-4.48-8-10-8z"/></svg>
+                네이버 톡톡
+              </a>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <span class="logo-main">Oncode_lab</span>
+            <span class="logo-sub">코딩하는 쑹쌤 · AI · SW Education</span>
+          </div>
+          <p class="footer-copy">&copy; 2026 쑹쌤. All rights reserved.</p>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script src="js/blog-links.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
